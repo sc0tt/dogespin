@@ -4,7 +4,7 @@ setup(
     name='dogespin',
     version='0.1.0-pre',
     py_modules=['dogespin'],
-    setup_requires=['requests>=2.1.0'],
+    install_requires=['requests>=2.1.0'],
     url='https://github.com/powhex/dogespin',
     license='MIT',
     author='powhex',
