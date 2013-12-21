@@ -17,17 +17,20 @@ Use
 Options for start_spinner():
 
 ```
-play = 0: play with real money
-play >= 0: play with play money (value of 'play' is your balance)
+starting_bet: your starting bet (default = 1)
+max_bet: will double no further, resetting current bid to 'starting_bet' (default = 64)
+
+play = 0: play with real money (this is the default)
+play > 0: play with play money (value of 'play' is your balance)
 
 qt_loss = 0: play forever
-qt_loss >= 0: play until total loss matches or exceeds value of 'qt_loss'
+qt_loss > 0: play until total loss matches or exceeds value of 'qt_loss' (default = 100)
 
 qt_win = 0: play forever
-qt_win >= 0: play until total win matches or exceeds value of 'qt_win'
+qt_win > 0: play until total win matches or exceeds value of 'qt_win' (default = 1000)
 
-rs = 0: use randomized sleep time from 1 to 10 seconds
-rs >= 0: use value of 'rs' as sleep time
+rs = 0: use randomized sleep time from 1 to 10 seconds (this is the default)
+rs > 0: use value of 'rs' as sleep time
 rs = type list: use random list item as sleep time
 
 col = "rand": bet on random color
