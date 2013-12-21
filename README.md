@@ -1,7 +1,8 @@
 Dogespin
 ========
 
-dogespin.l8.lv auto roulette bot
+Dogecoin roulette bot for http://dogespin.l8.lv
+* https://github.com/powhex/dogespin/
 
 Install
 -------
