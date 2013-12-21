@@ -66,7 +66,7 @@ def rsleep(rs):
 def get_color(col):
     return colors[random.randint(0,1) if col == 'rand' else col]
 
-def start_spinner(starting_bet=1, max_bet=64, play=0, qt_loss=100, qt_win=1000, rs=0, col='rand'):
+def start_spinner(secret, starting_bet=1, max_bet=64, play=0, qt_loss=100, qt_win=1000, rs=0, col='rand'):
     """
     Start spinner
     """
@@ -84,7 +84,7 @@ def start_spinner(starting_bet=1, max_bet=64, play=0, qt_loss=100, qt_win=1000, 
                 roll += 1
                 print "Roll #%s" % roll
                 print "Now betting %s DOGE on %s. [spinHash: %s]" % (next_bet, next_color, next_hash)
-                result = spin(next_color, next_bet, next_hash, play)
+                result = spin(next_color, next_bet, next_hash, play, secret=secret)
                 if result[0]=="ERROR":
                     return result
             except requests.HTTPError:
