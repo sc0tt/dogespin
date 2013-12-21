@@ -37,3 +37,12 @@ col = "rand": bet on random color
 col = 0: bet on black
 col = 1: bet on red
 ```
+
+Contributing
+------------
+
+If you'd like to contribute code, make a pull request
+
+Also accepting donations in dogecoins, naturally :)
+
+    DNuU16DfQSf7r9JfyM8VZKU1qb567PDAC6
