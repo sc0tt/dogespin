@@ -12,13 +12,14 @@ Use
 ---
 
     import dogespin
-    dogespin.secret_addr = 'your secret hash, found in url query string'
-    dogespin.start_spinner()
+    dogespin.start_spinner('your secret hash')
 
 
 Options for start_spinner():
 
 ```
+secret: your secret hash, found in url query string on dogespin.l8.lv
+
 starting_bet: your starting bet (default = 1)
 max_bet: will double no further, resetting current bid to 'starting_bet' (default = 64)
 
