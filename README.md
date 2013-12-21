@@ -1,6 +1,8 @@
 Dogespin
 ========
 
+dogespin.l8.lv auto roulette bot
+
 Install
 -------
 
@@ -33,7 +35,7 @@ rs = 0: use randomized sleep time from 1 to 10 seconds (this is the default)
 rs > 0: use value of 'rs' as sleep time
 rs = type list: use random list item as sleep time
 
-col = "rand": bet on random color
+col = "rand": bet on random color (this is the default)
 col = 0: bet on black
 col = 1: bet on red
 ```
