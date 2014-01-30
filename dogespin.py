@@ -86,9 +86,14 @@ def start_spinner(secret, starting_bet=1, max_bet=64, play=0, qt_loss=100, qt_wi
                 roll += 1
                 print "Roll #%s" % roll
                 print "Now betting %s DOGE on %s. [spinHash: %s]" % (next_bet, next_color, next_hash)
-                result = spin(next_color, next_bet, next_hash, play, secret=secret)
-                if result[0]=="ERROR":
-                    return result
+                while True:
+                    result = spin(next_color, next_bet, next_hash, play, secret=secret)
+                    if result[0] != "ERROR":
+                        break
+                    #If an error occurs, we got a bad hash from the last play. Get a new one and start over.
+                    else:
+                        print "Got an error. Trying a brand new hash."
+                        next_hash = get_next_hash()
             except requests.HTTPError:
                 print "HTTP error"
             else:
