@@ -50,7 +50,7 @@ def spin(color, bet, hash=get_next_hash, balance=0, spin_url=spin_url, secret=se
 
     else:
         print "Got error. Trying again..."
-        return spin(color, bet, balance=balance, secret=secret)
+        return spin(color, bet, hash=hash, balance=balance, secret=secret)
         #return response.text, response
 
 def rsleep(rs):
