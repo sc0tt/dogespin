@@ -5,7 +5,7 @@ import time
 import random
 
 
-secret_addr = '7a126c6c89988807e84f887a3cee48c84f789c6910f80f547dc250ec5db23a5e'
+secret_addr = ''
 spin_url = 'http://dogespin.l8.lv/ajax-spin.php'
 root_url = 'http://dogespin.l8.lv/'
 hash_re = re.compile(r'spinHash=\'([0-9abcdef]+)\'')
@@ -49,7 +49,9 @@ def spin(color, bet, hash=get_next_hash, balance=0, spin_url=spin_url, secret=se
         return [result, balance, bet_value, change, next_spin_hash, payout, hash_data, game_hash]
 
     else:
-        return response.text, response
+        print "Got error. Trying again..."
+        return spin(color, bet, balance=balance, secret=secret)
+        #return response.text, response
 
 def rsleep(rs):
     rnd = (random.random())
