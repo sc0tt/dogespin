@@ -87,8 +87,8 @@ def start_spinner(secret, starting_bet=1, max_bet=64, play=0, qt_loss=100, qt_wi
                 print "Roll #%s" % roll
                 print "Now betting %s DOGE on %s. [spinHash: %s]" % (next_bet, next_color, next_hash)
                 result = spin(next_color, next_bet, next_hash, play, secret=secret)
-                    if result[0]=="ERROR":
-                        return result
+                if result[0]=="ERROR":
+                    return result
             except requests.HTTPError:
                 print "HTTP error"
             else:
