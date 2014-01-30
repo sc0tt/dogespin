@@ -118,7 +118,11 @@ def start_spinner(secret, starting_bet=1, max_bet=64, play=0, qt_loss=100, qt_wi
 
                 if change < 0 and bet <= max_bet:
                     next_bet = bet*2
-                    print "\nDoubling\n"
+                    if next_bet > balance:
+                        balance = next_bet
+                        print "\nBetting remaining balance\n"
+                    else:
+                        print "\nDoubling\n"
                 else:
                     print "\nResetting bet\n"
                     next_bet = starting_bet
